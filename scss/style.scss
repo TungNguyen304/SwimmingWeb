@@ -21,6 +21,10 @@ html {
   }
 }
 
+img {
+  object-fit: cover;
+}
+
 // ::-webkit-scrollbar {
 //   width: 10px;
 // }
@@ -40,7 +44,7 @@ html {
 // }
 
 .container {
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   overflow-x: hidden;
 }
 
@@ -55,18 +59,21 @@ header {
   height: $height_header;
 
   .logo {
-    color: #4073de;
     font-size: 51px;
     font-weight: 500;
     line-height: $height_header;
     .logo__text {
       position: relative;
       display: inline-block;
-      span {
-        font-size: 16px;
-        position: absolute;
-        top: -10%;
-        right: -14px;
+      a {
+        color: #4073de;
+        text-decoration: none;
+        span {
+          font-size: 16px;
+          position: absolute;
+          top: -10%;
+          right: -14px;
+        }
       }
     }
   }
@@ -157,7 +164,6 @@ header {
           }
 
           .news__desc {
-            font-size: 23px;
             font-weight: 400;
             display: flex;
             align-items: flex-end;
@@ -211,21 +217,18 @@ header {
         }
 
         .section__desc {
-          font-size: 23px;
           margin-bottom: 30px;
         }
 
         .section__btn {
           padding: 25px 55px;
           color: white;
-          font-size: 23px;
           display: inline-block;
           background-image: linear-gradient(to right, #ff8902, #ff324e);
         }
 
         .section__list {
           list-style: none;
-          font-size: 23px;
           li {
             margin-bottom: 20px;
             i {
@@ -287,7 +290,6 @@ header {
           padding: 0 60px;
         }
         .banner__desc {
-          font-size: 23px;
           margin-bottom: 35px;
           padding: 0 60px;
         }
@@ -295,7 +297,6 @@ header {
           padding: 0 60px;
           div {
             padding: 25px 55px;
-            font-size: 23px;
             display: inline-block;
             background-color: white;
             color: black;
@@ -341,7 +342,6 @@ header {
 
       .profile__desc {
         margin-top: calc($avt_size / 2);
-        font-size: 23px;
         font-weight: 300;
         color: #515151;
         margin-bottom: 40px;
@@ -358,7 +358,6 @@ header {
 .info {
   display: flex;
   margin: 0 -13px;
-  font-size: 23px;
   .info__content {
     background-image: linear-gradient(to bottom, #0099e0, #007bc6);
     display: flex;
@@ -422,10 +421,14 @@ header {
             padding: 10px;
           }
 
-          i {
-            font-size: 30px;
+          a {
+            text-decoration: none;
             display: block;
-            color: #0099e0;
+            i {
+              display: block;
+              font-size: 30px;
+              color: #0099e0;
+            }
           }
         }
       }
@@ -435,7 +438,7 @@ header {
   .info__map {
     flex: 1;
     margin: 0 13px;
-    img {
+    iframe {
       width: 100%;
     }
   }
@@ -445,7 +448,6 @@ footer {
   padding: 60px 0;
   display: flex;
   justify-content: center;
-  font-size: 23px;
   font-weight: 300;
   margin: 0 13px;
 }
